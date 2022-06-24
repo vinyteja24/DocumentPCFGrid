@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="DocumentGrid" constructor="DocumentGrid" version="0.0.1" display-name-key="DocumentGrid" description-key="DocumentGrid description" control-type="standard">
+    <!-- dataset node represents a set of entity records on CDS; allow more than one datasets -->
+    <data-set name="subGridDataSet" display-name-key="subGridDataSet">
+    </data-set>
+    <property name="CallBackWebResourceName" display-name-key="CallBackWebResourceName" description-key="CallBackWebResourceName" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="CallBackSaveFunction" display-name-key="CallBackSaveFunction" description-key="CallBackSaveFunction" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="CallBackDeleteFunction" display-name-key="CallBackDeleteFunction" description-key="CallBackDeleteFunction" of-type="SingleLine.Text" usage="input" required="true" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+      <!-- UNCOMMENT TO ADD MORE RESOURCES-->
+      <css path="DocumentGrid.css" order="1" />
+      <!--<resx path="strings/DocumentGrid.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API -->
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+   
+  </control>
+</manifest>
